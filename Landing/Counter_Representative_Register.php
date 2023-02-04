@@ -6,7 +6,10 @@
     $email = $_POST['email'];
     $password = $_POST['psw'];
     $password_repeat = $_POST['psw-repeat'];
+
+    $error = 
   }
+
 ?>
 <!DOCTYPE html>
 <html>
