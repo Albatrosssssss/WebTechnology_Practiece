@@ -1,13 +1,13 @@
-<?php>
-  if(isset($post[btn]){
-    echo $firstname=$_POST["fname"];
-    $lastnmae=$_POST["lname"];
-    $number=$_POST["number"];
-    $email=$_POST["email"];
-    $password=$_POST["psw"];
-    $password_repeat=$_POST["psw-repeat"];
+<?php
+  if(isset($post[btn])){
+    echo $firstname=$_POST['fname'];
+    $lastnmae=$_POST['lname'];
+    $number=$_POST['number'];
+    $email=$_POST['email'];
+    $password=$_POST['psw'];
+    $password_repeat=$_POST['psw-repeat'];
   }
-</php>
+?>
 <!DOCTYPE html>
 <html>
 <head>
