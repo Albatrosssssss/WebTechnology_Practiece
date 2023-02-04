@@ -1,7 +1,18 @@
+<?php>
+  if(isset($post[btn]){
+    echo $firstname=$_POST["fname"];
+    $lastnmae=$_POST["lname"];
+    $number=$_POST["number"];
+    $email=$_POST["email"];
+    $password=$_POST["psw"];
+    $password_repeat=$_POST["psw-repeat"];
+  }
+</php>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Counter_Representative_Registration</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="class">
@@ -13,7 +24,7 @@
           <label for="Firstname"><b>First name </b></label>
           <input type="text" placeholder="First name" name="fname" id="first_name" required><br><br>
 
-          <label for="Firstname"><b>Last name </b></label>
+          <label for="Lastname"><b>Last name </b></label>
           <input type="text" placeholder="First name" name="lname" id="last_name" required><br><br>
 
           <label for="Number"><b>Phone Number</b></label>
@@ -30,7 +41,7 @@
           <hr>
       
           <p>By creating an account you agree to our <a href="Terms_Privacy.html">Terms & Privacy</a>.</p>
-          <button type="submit" class="registerbtn">Register</button>
+          <button type="submit" class="registerbtn" name ="btn">Register</button>
         </div>
       
         <div class="container signin">
