@@ -24,7 +24,7 @@
       $error['password'] = 'Insert Your Password';
     }
     if(empty($_POST['psw-repeat'])){
-      $error['password'] = 'Insert Your Password';
+      $error['password_repeat'] = 'Insert Your Password';
     }
   }
 
@@ -43,28 +43,52 @@
           <p>Please fill in this form to create an account.</p>
           <hr>
           <label for="Firstname"><b>First name </b></label>
-          <input type="text" placeholder="First name" name="fname" id="first_name" required><br><br>
-          <span>
+          <input type="text" placeholder="First name" name="fname" id="first_name" required><br>
             <?php
               if(isset($error['firstname'])){
                 echo $error['firstname'];
               }
-            ?>
-          </span>
+            ?><br>
+
           <label for="Lastname"><b>Last name </b></label>
-          <input type="text" placeholder="First name" name="lname" id="last_name" required><br><br>
+          <input type="text" placeholder="First name" name="lname" id="last_name" required><br>
+            <?php
+              if(isset($error['lastname'])){
+                echo $error['lastname'];
+              }
+            ?><br>
 
           <label for="Number"><b>Phone Number</b></label>
-          <input type="number" placeholder="Enter Phone Number" name="number" id="number" required><br><br>
+          <input type="number" placeholder="Enter Phone Number" name="number" id="number" required><br>
+            <?php
+              if(isset($error['number'])){
+                echo $error['number'];
+              }
+            ?><br>
 
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email" required><br><br>
-      
+          <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
+            <?php
+              if(isset($error['email'])){
+                echo $error['email'];
+              }
+            ?><br>
+
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br><br>
-      
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+            <?php
+              if(isset($error['password'])){
+                echo $error['password'];
+              }
+            ?><br>
+
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <?php
+              if(isset($error['password_repeat'])){
+                echo $error['password_repeat'];
+              }
+            ?><br>
           <hr>
       
           <p>By creating an account you agree to our <a href="Terms_Privacy.html">Terms & Privacy</a>.</p>
