@@ -7,7 +7,25 @@
     $password = $_POST['psw'];
     $password_repeat = $_POST['psw-repeat'];
 
-    $error = 
+    $error = [];
+    if(empty($_POST['fname'])){
+      $error['firstname'] = 'Insert Your First Name';
+    }
+    if(empty($_POST['lname'])){
+      $error['lastname'] = 'Insert Your last name';
+    }
+    if(empty($_POST['number'])){
+      $error['number'] = 'Insert Your Number';
+    }
+    if(empty($_POST['email'])){
+      $error['email'] = 'Insert Your Email';
+    }
+    if(empty($_POST['psw'])){
+      $error['password'] = 'Insert Your Password';
+    }
+    if(empty($_POST['psw-repeat'])){
+      $error['password'] = 'Insert Your Password';
+    }
   }
 
 ?>
@@ -26,7 +44,13 @@
           <hr>
           <label for="Firstname"><b>First name </b></label>
           <input type="text" placeholder="First name" name="fname" id="first_name" required><br><br>
-
+          <span>
+            <?php
+              if(isset($error['firstname'])){
+                echo $error['firstname'];
+              }
+            ?>
+          </span>
           <label for="Lastname"><b>Last name </b></label>
           <input type="text" placeholder="First name" name="lname" id="last_name" required><br><br>
 
