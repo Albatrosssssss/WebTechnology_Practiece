@@ -1,11 +1,11 @@
 <?php
-  if(isset($post[btn])){
-    echo $firstname=$_POST['fname'];
-    $lastnmae=$_POST['lname'];
-    $number=$_POST['number'];
-    $email=$_POST['email'];
-    $password=$_POST['psw'];
-    $password_repeat=$_POST['psw-repeat'];
+  if(isset($_POST['btn'])){
+    echo $firstname = $_POST['fname'];
+    $lastnmae = $_POST['lname'];
+    $number = $_POST['number'];
+    $email = $_POST['email'];
+    $password = $_POST['psw'];
+    $password_repeat = $_POST['psw-repeat'];
   }
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 </head>
 <body>
   <div class="class">
-    <form action="../controller/Counter_Representative_Register_Action.php" method="post" novalidate>
+    <form action="" method="post" novalidate>
         <div class="container">
           <h1>Register</h1>
           <p>Please fill in this form to create an account.</p>
