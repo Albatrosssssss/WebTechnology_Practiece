@@ -1,0 +1,17 @@
+
+.class {
+    margin: 10px;
+    padding: 10px;
+}
+
+.container label {
+    border: 5px;
+    display: block;
+}
+
+.container input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
