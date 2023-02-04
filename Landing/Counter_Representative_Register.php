@@ -1,7 +1,7 @@
 <?php
   if(isset($_POST['btn'])){
     echo $firstname = $_POST['fname'];
-    echo $lastnmae = $_POST['lname'];
+    echo $lastname = $_POST['lname'];
     echo $number = $_POST['number'];
     echo $email = $_POST['email'];
     echo $password = $_POST['psw'];
@@ -44,7 +44,7 @@
           <hr>
 
           <label for="Firstname"><b>First name </b></label>
-          <input type="text" placeholder="First name" name="fname" id="first_name" required><br>
+          <input type="text" placeholder="First name" name="fname" id="first_name" value="<?php if(isset($firstname)) echo $firstname ?>"><br>
             <span>
             <?php
               if(isset($error['firstname'])){
@@ -54,7 +54,7 @@
             </span>
 
           <label for="Lastname"><b>Last name </b></label>
-          <input type="text" placeholder="First name" name="lname" id="last_name" required><br>
+          <input type="text" placeholder="First name" name="lname" id="last_name" value="<?php if(isset($lastname)) echo $lastname ?>" ><br>
             <span>
             <?php
               if(isset($error['lastname'])){
@@ -64,7 +64,7 @@
             </span>
 
           <label for="Number"><b>Phone Number</b></label>
-          <input type="number" placeholder="Enter Phone Number" name="number" id="number" required><br>
+          <input type="number" placeholder="Enter Phone Number" name="number" id="number" value="<?php if(isset($number)) echo $number ?>" ><br>
             <span>
             <?php
               if(isset($error['number'])){
@@ -74,7 +74,7 @@
             </span>
 
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
+          <input type="text" placeholder="Enter Email" name="email" id="email" value="<?php if(isset($email)) echo $email ?>"><br>
             <span>
             <?php
               if(isset($error['email'])){
@@ -84,7 +84,7 @@
             </span>
 
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" value="<?php if(isset($password)) echo $password ?>"><br>
             <span>
             <?php
               if(isset($error['password'])){
@@ -94,7 +94,7 @@
             </span>
 
           <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" value="<?php if(isset($password_repeat)) echo $password_repeat ?>" >
             <span>
             <?php
               if(isset($error['password_repeat'])){
