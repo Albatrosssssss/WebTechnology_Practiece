@@ -94,7 +94,18 @@
             </span>
 
           <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" value="<?php if(isset($password_repeat)) echo $password_repeat ?>" >
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" value="
+          <?php 
+            if($password != $password_repeat) {
+              echo "Password not matched";
+            }
+            else if(isset($password_repeat)) {
+              echo $password_repeat;
+            }
+            else{
+
+            }
+          ?>" >
             <span>
             <?php
               if(isset($error['password_repeat'])){
