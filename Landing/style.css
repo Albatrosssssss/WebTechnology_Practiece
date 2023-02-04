@@ -15,3 +15,6 @@
     padding: 10px;
 }
 
+.container span {
+    color: red;
+}
