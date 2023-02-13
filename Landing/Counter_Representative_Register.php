@@ -1,11 +1,11 @@
 <?php
   if(isset($_POST['btn'])){
-    echo $firstname = $_POST['fname'];
-    echo $lastname = $_POST['lname'];
-    echo $number = $_POST['number'];
-    echo $email = $_POST['email'];
-    echo $password = $_POST['psw'];
-    echo $password_repeat = $_POST['psw-repeat'];
+     $firstname = $_POST['fname'];
+    $lastname = $_POST['lname'];
+     $number = $_POST['number'];
+     $email = $_POST['email'];
+     $password = $_POST['psw'];
+     $password_repeat = $_POST['psw-repeat'];
 
     $error = [];
     if(empty($_POST['fname'])){
