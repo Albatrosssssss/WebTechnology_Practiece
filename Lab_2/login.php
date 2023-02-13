@@ -3,7 +3,7 @@ if(isset($_POST['button'])){
     $username= $_POST['username'];
     $password= $_POST['password'];
 
-    $error=[];
+    $error = [];
     if(empty($_POST['username'])){
         $error['username']='Insert your username';
     }
@@ -25,28 +25,27 @@ if(isset($_POST['button'])){
             <td>
                 <fieldset>
                     <legend>Login</legend>
-                        <label for="Heading"> <b>Login</b> </label><br><br>
                         <form action="" method="post" novalidate>
                             <div class="login_container">   
                                 <label for="username"><b>Username</b></label> <br>
-                                <input type="text" placeholder="Enter username" name="username" value="<?php if(isset($username)) echo $username ?>"|><br><br>
+                                <input type="text" placeholder="Enter username" name="username" value="<?php if(isset($username)) echo $username ?>"|><br>
                                 <span>
                                     <?php
-                                        if(empty('username')){
+                                        if(isset($error['username'])){
                                             echo $error['username'];
                                         }
                                     ?>
-                                </span>
+                                </span><br>
 
                                 <label for="password"><b> Password </b></label><br>
-                                <input type="password" placeholder="Type Password " name="password" value="<?php if(isset($password)) echo $password ?>"><br><br>
+                                <input type="password" placeholder="Type Password " name="password" value="<?php if(isset($password)) echo $password ?>"><br>
                                 <span>
                                     <?php
-                                        if(empty('password')){
+                                        if(isset($error['password'])){
                                             echo $error['password'];
                                         }
                                     ?>
-                                </span>
+                                </span><br>
                                 <input type="submit" value ="Log in" name="button"><br><br>
                             </div>
                         </form>
