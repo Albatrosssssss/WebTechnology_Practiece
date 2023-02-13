@@ -17,6 +17,7 @@ if(isset($_POST['button'])){
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 	<title> Login Manager </title>
 </head>
 <body>
