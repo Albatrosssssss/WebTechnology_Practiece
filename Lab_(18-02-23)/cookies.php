@@ -1,5 +1,10 @@
+
 <?php
+    // if($cookie_name)
     if(isset($_POST['btn'])){
+        $cookie_name = "user";
+        $cookie_value = "Alex Porter";
+        setcookie($cookie_name, $cookie_value, time() + (8), "/");
         $color= $_POST['color'];
         $date= $_POST['date'];
     
@@ -10,12 +15,15 @@
         if(empty($_POST['date'])){
             $error['date']='Select Date';
         }
+        if(!empty($_POST['color'] && !empty($_POST['date'])))
+        header("Location: cookie_set.php");
 
     }
     if(isset($_POST['bttn'])){
-        if(empty($_POST['date'])){
-            $error['date']='Select Date';
-        }
+        header("Location: delete_cookies.php");
+        // if(empty($_POST['date'])){
+        //     $error['date']='Select Date';
+        // }
         
     }
 ?>
@@ -35,9 +43,27 @@
     <hr>
 	<form action="" method="POST">
         <label for="colour">Select a color: </label>
-		<input type="color" name="color" value="#000000"><br><br>
+		<input type="color" name="color" value="#000000"><br>
+        <span>
+        <?php
+          if(isset($error['color'])){
+            echo $error['color'];
+          }
+        ?><br>
+        </span>
+
+
         <label for="" > Expire on </label>
-        <input type="date" name="date"> <br><br>
+        <input type="datetime-local" name="date" value="<?php if(isset($date)) echo $date ?>"> <br>
+        <span>
+        <?php
+          if(isset($error['date'])){
+            echo $error['date'];
+          }
+        ?><br><br>
+        </span>
+
+
 		<input type="submit" name = "btn" value="Set Cookies"|>
 	</form>
     <hr>
