@@ -14,7 +14,7 @@
     <hr>
 	<form action="" method="POST">
         <label for="colour">Select a color: </label>
-		<input type="color" name="color" value="#ff0000"><br><br>
+		<input type="color" name="color" value="#000000"><br><br>
         <label for="" > Expire on </label>
         <input type="date" name="time"> <br><br>
 		<input type="submit" name = "btn" value="Set Cookies"|>
