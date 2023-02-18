@@ -26,11 +26,5 @@
     <input type="submit" name = "bttn" value="Destroy Cookies"|>
 	</form>
 
-	<?php 
-		if (isset($_GET['msg'])) {
-			echo $_GET['msg'];
-		}
-	?>
-
 </body>
 </html>
