@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <?php 
 if(isset($_POST['button'])){
     $username= $_POST['username'];
