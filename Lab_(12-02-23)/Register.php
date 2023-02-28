@@ -1,6 +1,7 @@
 
 <?php
   if(isset($_POST['btn'])){
+    setcookie("user","sadi",time()+10);
     $firstname = $_POST['fname'];
     $lastname = $_POST['lname'];
     $father_name = $_POST['father_name'];
