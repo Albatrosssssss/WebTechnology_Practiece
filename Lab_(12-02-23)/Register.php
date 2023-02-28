@@ -1,7 +1,6 @@
 
 <?php
   if(isset($_POST['btn'])){
-    setcookie("user","sadi",time()+10);
     $firstname = $_POST['fname'];
     $lastname = $_POST['lname'];
     $father_name = $_POST['father_name'];
@@ -17,6 +16,8 @@
 
     $password = $_POST['password'];
     $username = $_POST['username'];
+
+    setcookie("First_Name",$firstname,time()+10);
 
     $error = [];
     if(empty($_POST['fname'])){
